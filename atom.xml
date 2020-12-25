@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wyemailwork.github.io</id>
-    <title>兰同学</title>
-    <updated>2020-12-25T01:18:22.873Z</updated>
+    <title>兰岱</title>
+    <updated>2020-12-25T07:28:40.307Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wyemailwork.github.io"/>
     <link rel="self" href="https://wyemailwork.github.io/atom.xml"/>
     <subtitle>怕什么真理无穷 进一寸有一寸的欢喜 </subtitle>
     <logo>https://wyemailwork.github.io/images/avatar.png</logo>
     <icon>https://wyemailwork.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 兰同学</rights>
+    <rights>All rights reserved 2020, 兰岱</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://wyemailwork.github.io/post/hello-gridea/</id>
