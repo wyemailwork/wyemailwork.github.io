@@ -80,7 +80,7 @@
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1608882708147" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1608889766874" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -95,7 +95,7 @@
         <div class="center content">
           <div class="featured-image cover" style="background-image: url('https://wyemailwork.github.io/post-images/cai-fu-zi-you-zhi-lu.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-12-25"><i class="fa fa-calendar"></i><span class="lately">14 分钟前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-12-25"><i class="fa fa-calendar"></i><span class="lately">2 小时前</span></time>
               
               <a href="https://wyemailwork.github.io/post/cai-fu-zi-you-zhi-lu/#comments" class="comments meta-info" title="">
                 <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/cai-fu-zi-you-zhi-lu/"> </span>
@@ -229,9 +229,26 @@
               
             
               <div id="comments" class="bg-white hosted ">
-                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
               </div>
-              <div class="clear"></div>
             
 
             </div>
@@ -368,7 +385,7 @@
         </div>
 
         <div class="logo">
-          <a href="https://wyemailwork.github.io"><img src="\media\images\custom-footerLogo.png" alt=""></a>
+          <a href="https://wyemailwork.github.io"><img src="\media\images\custom-footerLogo.jpg" alt=""></a>
         </div>
         <p class="published border-effect">
           ©2019 共 11 篇文章
@@ -384,10 +401,31 @@
     <div class="clear"></div>
 
         
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+<script>
+    new Valine({
+        el: '#comments',
+        appId: 'NNr4HepASQA9rQMOYkTPjOmN-MdYXbMMI' ,
+        appKey: '2RcnrNR0yprvYkX3hn0C4iB5',
+        pageSize: 30,
+        placeholder: '既然来了，那就留个痕迹吧~',
+        visitor: true // 阅读量统计
+    })
+</script>
+    
 
       
     <script src="https://wyemailwork.github.io/media/js/functions-post.js"></script>
-
+	 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+	 <div id="vcomments"></div>
+	 <script>
+		 new Valine({
+			 el: '#vcomments',
+			 appId: 'NNr4HepASQA9rQMOYkTPjOmN-MdYXbMMI',
+			 appKey: '2RcnrNR0yprvYkX3hn0C4iB5'
+		 })
+	 </script>
     </div>
     <!-- end: #wrapper -->
   </body>
